@@ -54,3 +54,26 @@ The Marvel Character Cinematic Guide is designed to help users discover and lear
 
 ### Favorites Page
 - **Favorited Characters and Movies**: Displays a list of user favorited items.
+
+## Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/marvel-character-cinematic-guide.git
+   cd marvel-character-cinematic-guide
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your API keys:
+
+   ```
+   MARVEL_PUBLIC_KEY=your_marvel_public_key
+   MARVEL_PRIVATE_KEY=your_marvel_private_key
+   OMDB_API_KEY=your_omdb_api_key
+   ```
