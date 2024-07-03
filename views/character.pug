@@ -1,0 +1,22 @@
+extends layouts/layout
+
+block content
+  .container
+    .row
+      .col-md-8.offset-md-2
+        if character
+          h1= character.name
+          p= character.description
+          h3 Comics
+          ul
+            each comic in character.comics.items
+              li= comic.name
+        if movies
+          h3 Movies
+          ul
+            each movie in movies
+              li
+                h4= movie.Title
+                p= movie.Year
+                img(src=movie.Poster, alt=movie.Title, width='100')
+        a.btn.btn-secondary(href='/') Back

@@ -1,0 +1,12 @@
+extends layouts/layout
+
+block content
+  .container
+    .row
+      .col-md-8.offset-md-2
+        h1 Marvel Movie Explorer
+        p Explore Marvel characters and their movie appearances.
+        form(method='get', action='/character')
+          .form-group
+            input.form-control(type='text', name='name', placeholder='Enter Marvel character name')
+          button.btn.btn-primary(type='submit') Search
