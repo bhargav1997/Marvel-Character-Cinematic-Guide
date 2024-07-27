@@ -1,12 +1,18 @@
 extends layouts/layout
 
 block content
-  .container
+  .loader-overlay
+    .marvel-loader-container
+      .marvel-loader
+        .circle
+          .logo
+
+  .home
     .row
       .col-md-8.offset-md-2
         h1 Marvel Movie Explorer
         p Explore Marvel characters and their movie appearances.
-        form(method='get', action='/character')
+        form(method='get', action='/character', id='search-form')
           .form-group
-            input.form-control(type='text', name='name', placeholder='Enter Marvel character name')
+            input.form-control(type='text', name='name', placeholder='Enter Marvel character name ex: Spider-Man', required)
           button.btn.btn-primary(type='submit') Search

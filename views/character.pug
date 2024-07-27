@@ -1,22 +1,30 @@
 extends layouts/layout
 
 block content
-  .container
+  .container#character-container
     .row
-      .col-md-8.offset-md-2
+      .col-md-12
+        a.btn.btn-secondary#back-button(href='/', tabindex='1') Back
+
         if character
-          h1= character.name
-          p= character.description
-          h3 Comics
-          ul
-            each comic in character.comics.items
-              li= comic.name
-        if movies
-          h3 Movies
-          ul
+          .character-details
+            img.character-thumbnail(src=character.thumbnail.path + '.' + character.thumbnail.extension, alt=character.name)
+            h1#character-name= character.name
+            p#character-description= character.description
+
+        if movies.length > 0
+          h3#movies-heading Movies
+          .movie-grid
             each movie in movies
-              li
-                h4= movie.Title
-                p= movie.Year
-                img(src=movie.Poster, alt=movie.Title, width='100')
-        a.btn.btn-secondary(href='/') Back
+              .movie-card
+                img.movie-poster(src=movie.Poster, alt=movie.Title)
+                .movie-info
+                  h4.movie-title= movie.Title
+                  p.movie-year= movie.Year
+                  p.movie-released Released: #{movie.Released}
+                  .movie-rating
+                    each star in [1, 2, 3, 4, 5]
+                      i.fa.fa-star(class=(star <= Math.round(movie.imdbRating) ? 'filled' : ''))
+                  p.movie-description= movie.Plot
+        else
+          p.sorry-no-data Sorry, no data found.

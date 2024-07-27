@@ -42,9 +42,25 @@ router.get("/character", async (req, res) => {
          },
       });
 
-      const movies = moviesResponse.data.Search;
+      if (!moviesResponse.data.Search) {
+         return res.render("character", { character: null, movies: [] });
+      }
 
-      res.render("character", { character, movies });
+      const movies = moviesResponse.data.Search.map(async (movie) => {
+         const movieDetailsResponse = await axios.get(`http://www.omdbapi.com/`, {
+            params: {
+               i: movie.imdbID,
+               apikey: OMDB_API_KEY,
+            },
+         });
+         return movieDetailsResponse.data;
+      });
+
+      const moviesDetails = await Promise.all(movies);
+
+      console.log("Movies Details:", moviesDetails[0].Ratings);
+
+      res.render("character", { character, movies: moviesDetails });
    } catch (error) {
       console.error(error);
       res.redirect("/");

@@ -1,12 +1,339 @@
+:root {
+   --marvel-red: #e62429;
+   --marvel-darker-red: #c81d24;
+   --marvel-green: #28a745;
+   --marvel-blue: #007bff;
+   --marvel-gold: #f5c518;
+   --marvel-light-gray: #333;
+   --marvel-gray: #6c757d;
+   --marvel-dark-gray: #1c1c1c;
+   --marvel-white: #f5f5f5;
+   --marvel-black: #000;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+@font-face {
+   font-family: "Avengeance";
+   src: url("../fonts/Avengeance-E1zj.otf") format("otf"), url("../fonts/Avengeance-YolO.ttf") format("ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Deathe Maach Ncv";
+   src: url("../fonts/DeatheMaachNcv-2ejv.ttf") format("ttf"), url("../fonts/DeatheMaachNcv-jYj0.otf") format("otf");
+   font-weight: normal;
+   font-style: normal;
+}
+
 body {
-   padding-top: 50px;
+   background-color: var(--marvel-white);
 }
 
 h1,
 h3 {
+   font-family: "Avengeance", sans-serif;
    margin-top: 20px;
+   color: var(--marvel-white);
+}
+
+p {
+   font-family: "Deathe Maach Ncv", sans-serif;
+   font-size: 1.2em;
+   color: var(--marvel-white);
 }
 
 .container {
+   padding-top: 20px;
+}
+
+.home {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 20px;
+   justify-content: center;
+   align-items: center;
+   background-image: url(../images/comic-style-background.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   height: 100vh;
+   width: 100%;
+   position: relative;
+}
+
+.home h1 {
+   font-size: 6rem;
+   margin-top: 20px;
+   text-shadow: 2px 2px 4px var(--marvel-black);
+}
+
+.home p {
+   font-size: 2rem;
+}
+
+.form-group {
+   margin-top: 20px;
+}
+
+input.form-control {
+   border: 2px solid var(--marvel-red);
+   background-color: var(--marvel-dark-gray);
+   color: var(--marvel-white);
+   padding: 10px;
+   font-size: 1.2em;
+   border-radius: 5px;
+   transition: all 0.3s ease-in-out;
+}
+
+input.form-control:focus {
+   color: var(--marvel-white);
+   outline: none;
+   box-shadow: 0 0 10px var(--marvel-red);
+   background-color: var(--marvel-light-gray);
+}
+
+input.form-control::placeholder {
+   color: var(--marvel-white);
+   font-style: italic;
+}
+
+button.btn-primary {
+   background-color: var(--marvel-red);
+   border: none;
+   width: 100%;
+   padding: 12px;
+   font-size: 1.2em;
+   border-radius: 5px;
+   transition: all 0.3s ease-in-out;
+}
+
+button.btn-primary:focus,
+button.btn-primary:hover {
+   outline: none;
+   box-shadow: 0 0 10px var(--marvel-darker-red);
+   background-color: var(--marvel-darker-red);
+}
+
+@keyframes bounce {
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-30px);
+   }
+}
+
+/* Character Details Page */
+#character-container {
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.8);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   color: var(--marvel-white);
+}
+
+.character-details {
+   text-align: center;
+   margin-bottom: 40px;
+}
+
+.character-thumbnail {
+   border-radius: 10px;
+   width: 200px;
+   height: auto;
+}
+
+#character-name {
+   font-family: "Avengeance", sans-serif;
+   color: var(--marvel-red);
+}
+
+#character-description {
+   font-family: "Deathe Maach Ncv", sans-serif;
+   font-size: 1.2em;
+   margin-top: 20px;
+}
+
+#movies-heading {
+   font-family: "Avengeance", sans-serif;
+   color: var(--marvel-red);
+}
+
+.movie-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 20px;
+}
+
+.movie-card {
+   background: rgba(255, 255, 255, 0.1);
+   border: 2px solid var(--marvel-red);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   overflow: hidden;
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.movie-poster {
+   width: 100%;
+   border-bottom: 2px solid var(--marvel-red);
+}
+
+.movie-info {
+   padding: 10px;
+}
+
+.movie-title {
+   font-family: "Avengeance", sans-serif;
+   font-size: 1.2em;
+   color: var(--marvel-gold);
+   margin-bottom: 5px;
+}
+
+.movie-year,
+.movie-released {
+   font-family: "Deathe Maach Ncv", sans-serif;
+   font-size: 1em;
+   color: var(--marvel-white);
+   margin-bottom: 5px;
+}
+
+.movie-description {
+   font-family: "Deathe Maach Ncv", sans-serif;
+   font-size: 1em;
+   color: var(--marvel-white);
+}
+
+.movie-rating {
+   display: flex;
+   gap: 2px;
+   margin: 10px 0;
+}
+
+.movie-rating i {
+   color: var(--marvel-gold);
+}
+
+.movie-rating .filled {
+   color: var(--marvel-gold);
+}
+
+.movie-rating .fa-star {
+   font-size: 1.2em;
+}
+
+#back-button {
+   background-color: #555;
+   color: var(--marvel-white);
+   border: none;
+   padding: 10px 20px;
+   text-align: center;
+   display: inline-block;
+   font-size: 1em;
+   margin: 20px auto;
+   border-radius: 5px;
+   text-decoration: none;
+   transition: background-color 0.3s ease-in-out;
+}
+
+#back-button:hover {
+   background-color: #444;
+}
+
+/* Loader */
+/* Loader Overlay */
+.loader-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 9999;
+   visibility: hidden;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.loader-overlay.active {
+   visibility: visible;
+   opacity: 1;
+}
+
+.marvel-loader-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   width: 100vw;
+}
+
+.marvel-loader {
+   position: relative;
+   width: 100px;
+   height: 100px;
+}
+
+.circle {
+   border: 5px solid transparent;
+   border-top: 5px solid var(--marvel-gold);
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+   animation: spin 1.5s linear infinite;
+   position: relative;
+}
+
+.logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 50px;
+   height: 50px;
+   background: linear-gradient(to bottom, var(--marvel-gold) 0%, #ff6347 100%); /* Gradient */
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+   animation: logo-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes logo-bounce {
+   0%,
+   100% {
+      transform: translate(-50%, -50%) scale(1);
+   }
+   50% {
+      transform: translate(-50%, -50%) scale(1.2);
+   }
+}
+
+.sorry-no-data {
+   font-family: "Deathe Maach Ncv", sans-serif;
+   font-size: 2.2em;
+   color: var(--marvel-red);
+   text-align: center;
    margin-top: 20px;
 }
