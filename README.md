@@ -7,53 +7,59 @@ The Marvel Character Cinematic Guide is designed to help users discover and lear
 ## Features
 
 1. **Character Search**:
-   - Users can search for Marvel characters.
-   - Display detailed information about the character, including their description, comics they appear in, and related series.
+
+   -  Users can search for Marvel characters.
+   -  Display detailed information about the character, including their description, comics they appear in, and related series.
 
 2. **Movie Appearances**:
-   - For each character, list the movies they appear in.
-   - Fetch movie details (title, release year, plot, poster) using the OMDb API.
+
+   -  For each character, list the movies they appear in.
+   -  Fetch movie details (title, release year, plot, poster) using the OMDb API.
 
 3. **Favorites**:
-   - Allow users to favorite characters and movies for quick access.
-   - Store favorites locally in the browser or using a simple backend.
+
+   -  Allow users to favorite characters and movies for quick access.
+   -  Store favorites locally in the browser or using a simple backend.
 
 4. **Random Character/Movie**:
-   - Provide a feature to show a random Marvel character and their movie appearances.
+   -  Provide a feature to show a random Marvel character and their movie appearances.
 
 ## Technologies Used
 
-- **Styling**:
-  - Bootstrap for styling
+-  **Styling**:
 
-- **Backend**:
-  - Node.js
-  - Express
-  - Pug for templating
-  - Axios for API requests
+   -  Bootstrap for styling
+
+-  **Backend**:
+   -  Node.js
+   -  Express
+   -  Pug for templating
+   -  Axios for API requests
 
 ## APIs and Open Data Sources
 
 1. **Marvel API**
-   - **URL**: [Marvel API Documentation](https://developer.marvel.com/docs)
-   - **Purpose**: To fetch information about Marvel characters, including descriptions, comics, and related series.
+
+   -  **URL**: [Marvel API Documentation](https://developer.marvel.com/docs)
+   -  **Purpose**: To fetch information about Marvel characters, including descriptions, comics, and related series.
 
 2. **OMDb API**
-   - **URL**: [OMDb API Documentation](http://www.omdbapi.com/)
-   - **Purpose**: To fetch movie details such as titles, release years, plots, and posters where Marvel characters appear.
-
-## Wireframes
+   -  **URL**: [OMDb API Documentation](http://www.omdbapi.com/)
+   -  **Purpose**: To fetch movie details such as titles, release years, plots, and posters where Marvel characters appear.
 
 ### Home Page
-- **Search Bar**: Allows users to search for Marvel characters.
-- **Introduction**: Brief overview of the tool.
+
+-  **Search Bar**: Allows users to search for Marvel characters.
+-  **Introduction**: Brief overview of the tool.
 
 ### Character Details Page
-- **Character Information**: Displays name, description, and comics.
-- **Movie Appearances**: Lists movies the character appears in, with details.
+
+-  **Character Information**: Displays name, description, and comics.
+-  **Movie Appearances**: Lists movies the character appears in, with details.
 
 ### Favorites Page
-- **Favorited Characters and Movies**: Displays a list of user favorited items.
+
+-  **Favorited Characters and Movies**: Displays a list of user favorited items.
 
 ## Installation
 
@@ -91,14 +97,22 @@ The Marvel Character Cinematic Guide is designed to help users discover and lear
 # Outputs
 
 ## Home Page
+
 ![Character Cinematic Guide | Home Page](./demo/Home.png)
 
 ## Loader
+
 ![Character Cinematic Guide | Loader](./demo/Loader.png)
 
 ## Character Details Page
+
 ![Character Cinematic Guide | Character Details Page](./demo/CharacterInfo.png)
 
 ## Character Movies Page
+
 ![Character Cinematic Guide | Character Movies Page](./demo/CharacterMovies.png)
 
+## References
+
+-  Background Images from [FreePik](https://www.freepik.com/free-vector/comic-style-background_12300602.htm#fromView=search&page=1&position=0&uuid=d8c714fa-49df-44b8-86a2-573c769e7cf4)
+-  Favicon Icon from [Marvel Cinematic Universe](https://www.marvel.com/cinematic-universe)
