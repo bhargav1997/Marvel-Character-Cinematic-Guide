@@ -58,8 +58,6 @@ router.get("/character", async (req, res) => {
 
       const moviesDetails = await Promise.all(movies);
 
-      console.log("Movies Details:", moviesDetails[0].Ratings);
-
       res.render("character", { character, movies: moviesDetails });
    } catch (error) {
       console.error(error);

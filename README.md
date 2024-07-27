@@ -77,3 +77,28 @@ The Marvel Character Cinematic Guide is designed to help users discover and lear
    MARVEL_PRIVATE_KEY=your_marvel_private_key
    OMDB_API_KEY=your_omdb_api_key
    ```
+
+4. Start the server:
+
+   ```sh
+   npm start
+   ```
+
+5. Open http://localhost:3000 in your browser.
+
+6. You should see the home page.
+
+# Outputs
+
+## Home Page
+![Character Cinematic Guide | Home Page](./demo/Home.png)
+
+## Loader
+![Character Cinematic Guide | Loader](./demo/Loader.png)
+
+## Character Details Page
+![Character Cinematic Guide | Character Details Page](./demo/CharacterInfo.png)
+
+## Character Movies Page
+![Character Cinematic Guide | Character Movies Page](./demo/CharacterMovies.png)
+
