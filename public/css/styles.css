@@ -163,6 +163,8 @@ button.btn-primary:hover {
 #movies-heading {
    font-family: "Avengeance", sans-serif;
    color: var(--marvel-red);
+   font-size: 4rem;
+   margin: 20px auto;
 }
 
 .movie-grid {
@@ -196,9 +198,11 @@ button.btn-primary:hover {
 
 .movie-title {
    font-family: "Avengeance", sans-serif;
-   font-size: 1.2em;
+   font-size: 1.8em;
    color: var(--marvel-gold);
-   margin-bottom: 5px;
+   margin: 10px 0;
+   letter-spacing: 3px;
+   line-height: 40px;
 }
 
 .movie-year,
